@@ -1,0 +1,22 @@
+{% extends "HaynnerClientBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+<h2>Liste des clients</h2>
+
+<ul>
+	{% for client in clients %}
+		<li>
+			<a href="{{ path('voir', {'id':client.id}) }}">{{ client.nom }} {{ client.prenom }}</a>
+		</li>
+	{% else %}
+		<li>
+			Base de donnée vide.
+		</li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+<div class="col-md-8">
+	<legend>Données du client</legend>
+	<form method="post" {{ form_enctype(form)}}>
+		{{ form_widget(form) }}
+		<input type="submit" class="btn btn-primary" />
+	</form>
+	<a href="{{ path('homepage') }}" class="btn btn-primary">Retour à l'index</a>
+</div>

@@ -1,0 +1,16 @@
+{% extends "HaynnerClientBundle::layout.html.twig" %}
+
+{% block title %}
+  Fiche client- {{ parent() }}
+{% endblock %}
+{% block body %}
+	<p><b>nom</b> : {{ client.nom }}</p>
+	<p><b>prenom</b> : {{ client.prenom }}</p>
+	<p><b>date de naissance</b> : {{ client.dateDeNaissance|date('d/m/Y') }}</p>
+	<p><b>e-mail</b> : {{ client.email }}</p>
+	<p><b>ville</b> : {{ client.ville }}</p>
+	<p>
+		<a href="{{ path('homepage') }}" class="btn btn-primary">Retour à la liste</a>
+		<a href="{{ path('modifier',{'id':client.id}) }}" class="btn btn-primary">Modifier</a>
+	</p>
+{% endblock %}

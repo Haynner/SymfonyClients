@@ -1,0 +1,7 @@
+parameters:
+#    haynner_user.example.class: Haynner\UserBundle\Example
+
+services:
+#    haynner_user.example:
+#        class: %haynner_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

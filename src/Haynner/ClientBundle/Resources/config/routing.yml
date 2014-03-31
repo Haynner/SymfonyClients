@@ -1,0 +1,21 @@
+homepage:
+    path:  	  /index
+    defaults: { _controller: HaynnerClientBundle:Default:index }
+
+voir:
+    path:     /client/{id}
+    defaults: { _controller: HaynnerClientBundle:Default:voir }
+    requirements:
+        id:   \d+
+
+ajouter:
+    path:     /ajouter
+    defaults: { _controller: HaynnerClientBundle:Default:ajouter }
+
+modifier:
+    path:     /modifier/{id}
+    defaults: { _controller: HaynnerClientBundle:Default:modifier }
+
+serialize:
+    path:     /liste.json
+    defaults: { _controller: HaynnerClientBundle:Default:serialize }
